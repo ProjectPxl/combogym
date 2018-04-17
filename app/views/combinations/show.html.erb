@@ -1,7 +1,9 @@
-<h2> <%= @combination.name %> </h2>
+<section class="grid">
+	<h2> <%= @combination.name %> </h2>
 
-<ul>
-	<% @combination.products.each do |p| %>
-		<li> <%= p.name %> </li>
-	<% end %>	
-</ul>
+	<ul>
+		<% @combination.products.each do |p| %>
+			<li> <%= p.name %> </li>
+		<% end %>	
+	</ul>
+</section>
