@@ -1,0 +1,7 @@
+<ul>
+	<% @combinations.each do |c| %>
+		<li> <%= link_to c.name, c %> </li>
+	<% end %>	
+	<br><br>	
+	<%= link_to "New Combo", new_combination_path %>
+</ul>
