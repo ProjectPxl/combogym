@@ -1,12 +1,33 @@
-@import "neat";
-
-.grid {
-	@inlcude grid-container();
-	max-width: 1400px;
-	margin: 0 auto;
-	@include grid-visual;	
+* {
+    box-sizing: border-box;
 }
 
-.col {
-	@include grid-column(4);
+.demo {
+	height: 500px;
+	background-color: gray;
+}
+
+.cf::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.card {
+	background: white;
+	padding: 20px;
+	border: 1px solid lighten(gray, 40%);
+}
+
+.category-item {
+	list-style-type: none;
+	margin-bottom: 20px;
+	@extend .card;
+	padding: 35px 10px 35px 10px;
+	// box-shadow: 0 3px 5px hsla(0, 0, 0, .1);
+}
+
+.build-summary {
+	@extend .card;
+	margin-top: 58px;
 }

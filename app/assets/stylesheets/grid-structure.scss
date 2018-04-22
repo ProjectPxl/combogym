@@ -1,0 +1,23 @@
+@import "neat";
+
+.grid {
+	@inlcude grid-container();
+	max-width: 1400px;
+	margin: 0 auto;
+	// @include grid-visual;	
+}
+
+.build-items {
+	@include grid-column(8 of 12);
+}
+
+.build-summary {
+	@include grid-column(4 of 12);	
+}
+
+.cateogry {
+	.category-item {
+		@include grid-column(3 of 12);
+	}
+}
+

@@ -1,9 +1,49 @@
-<section class="grid">
-	<h2> <%= @combination.name %> </h2>
+<section class="build">
+	
+	<div class="grid">
+		<div class="demo"></div>
+	</div>
+	
+	<div class="grid build cf">
+		
+		<div class="build-items">
+		
+			<div class="cateogry category-rack cf">
+				<div class="category-title">
+					<h3>Racks</h3>
+				</div>
+				<ul class="cf">
+<!-- 					<% @combination.products.each do |p| %>
+						<li class="category-item"> <%= p.name %> </li>
+					<% end %>	 -->
+					<li class="category-item"> Rack1 </li>
+					<li class="category-item"> Rack2 </li>
+					<li class="category-item"> Rack3 </li>
+					<li class="category-item"> Rack4 </li>
+				</ul>			
+			</div>
 
-	<ul>
-		<% @combination.products.each do |p| %>
-			<li> <%= p.name %> </li>
-		<% end %>	
-	</ul>
+			<div class="cateogry category-bench cf">
+				<div class="category-title">
+					<h3>Benches</h3>
+				</div>
+				<ul class="cf">
+<!-- 					<% @combination.products.each do |p| %>
+						<li class="category-item"> <%= p.name %> </li>
+					<% end %>	 -->
+					<li class="category-item"> Bench1 </li>
+					<li class="category-item"> Bench2 </li>
+					<li class="category-item"> Bench3 </li>
+					<li class="category-item"> Bench4 </li>
+				</ul>			
+			</div>
+
+		</div>
+
+		<div class="build-summary">
+			<h3>Summary</h3>
+		</div>
+
+	</div>
+
 </section>
