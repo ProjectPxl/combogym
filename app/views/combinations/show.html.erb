@@ -8,35 +8,18 @@
 		
 		<div class="build-items">
 		
-			<div class="cateogry category-rack cf">
-				<div class="category-title">
-					<h3>Racks</h3>
+			<% @output.each do |name, p| %>
+				<div class="cateogry category-rack cf">
+					<div class="category-title">
+						<h3><%= name %></h3>
+					</div>
+					<ul class="cf">
+						<% @output[name].each do |p_name, p| %>
+							<li class="category-item"> <%= p.display_name %> </li>
+						<% end %>
+					</ul>			
 				</div>
-				<ul class="cf">
-<!-- 					<% @combination.products.each do |p| %>
-						<li class="category-item"> <%= p.name %> </li>
-					<% end %>	 -->
-					<li class="category-item"> Rack1 </li>
-					<li class="category-item"> Rack2 </li>
-					<li class="category-item"> Rack3 </li>
-					<li class="category-item"> Rack4 </li>
-				</ul>			
-			</div>
-
-			<div class="cateogry category-bench cf">
-				<div class="category-title">
-					<h3>Benches</h3>
-				</div>
-				<ul class="cf">
-<!-- 					<% @combination.products.each do |p| %>
-						<li class="category-item"> <%= p.name %> </li>
-					<% end %>	 -->
-					<li class="category-item"> Bench1 </li>
-					<li class="category-item"> Bench2 </li>
-					<li class="category-item"> Bench3 </li>
-					<li class="category-item"> Bench4 </li>
-				</ul>			
-			</div>
+			<% end %>
 
 		</div>
 

@@ -6,6 +6,11 @@ class CombinationsController < ApplicationController
 
 	def show
 		@combination = Combination.find params[:id]
+		@output = {}
+		@combination.products.each do |p|
+			@output[ p.category.name ] ||= {}
+			@output[ p.category.name ][p.name] = p
+		end
 	end
 
 	def new

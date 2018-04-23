@@ -1,5 +1,5 @@
 <%= form_for @combination do |f| %>
 	<%= f.text_field :name %>
-	<%= f.collection_check_boxes :product_ids, Product.all, :id, :name %>
+	<%= f.collection_check_boxes :product_ids, Product.all, :id, :display_name %>
 	<%= f.submit "Create" %>
 <% end %>
