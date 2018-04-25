@@ -52,3 +52,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 gem 'neat'
+gem 'jquery-rails'
+gem 'react-rails'
+gem 'backbone-on-rails'
