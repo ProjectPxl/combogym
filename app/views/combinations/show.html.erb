@@ -4,7 +4,7 @@
 		<div class="demo"></div>
 	</div>
 	
-	<div class="grid build cf">
+	<div class="grid cf">
 		
 		<div class="build-items">
 		
@@ -15,7 +15,7 @@
 					</div>
 					<ul class="cf">
 						<% @output[name].each do |p_name, p| %>
-							<li class="category-item"> <%= p.display_name %> </li>
+							<li class="category-item js-category-item" data-item-name="<%= p.name %>" data-item-display-name="<%= p.display_name %>" data-item-id="<%= p.id %>" data-item-price="300"> <%= p.display_name %> </li>
 						<% end %>
 					</ul>			
 				</div>
@@ -25,6 +25,7 @@
 
 		<div class="build-summary">
 			<h3>Summary</h3>
+			<ul class="summary-list"></ul>
 		</div>
 
 	</div>

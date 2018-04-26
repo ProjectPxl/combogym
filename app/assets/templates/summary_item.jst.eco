@@ -1,0 +1,3 @@
+<li class="summary-item">
+	<%= @item.displayName %> | <%= @item.price %>
+</li>
