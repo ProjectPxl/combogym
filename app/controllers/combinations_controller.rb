@@ -7,9 +7,19 @@ class CombinationsController < ApplicationController
 	def show
 		@combination = Combination.find params[:id]
 		@output = {}
-		@combination.products.each do |p|
+		gon.base = {}
+		@combination.products.select('products.*, product_combinations.base').each do |p|
+			
 			@output[ p.category.name ] ||= {}
 			@output[ p.category.name ][p.name] = p
+			if p.base? 
+				gon.base[p.name] = {
+					id: p.id,
+					displayName: p.display_name,
+					price: "250"
+				}
+			end
+
 		end
 	end
 

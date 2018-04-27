@@ -15,7 +15,7 @@
 					</div>
 					<ul class="cf">
 						<% @output[name].each do |p_name, p| %>
-							<li class="category-item js-category-item" data-item-name="<%= p.name %>" data-item-display-name="<%= p.display_name %>" data-item-id="<%= p.id %>" data-item-price="300"> <%= p.display_name %> </li>
+							<li class="category-item js-category-item <%= p.base? ? 'is-base is-active' : '' %>" data-item-name="<%= p.name %>" data-item-display-name="<%= p.display_name %>" data-item-id="<%= p.id %>" data-item-price="300"> <%= p.display_name %> </li>
 						<% end %>
 					</ul>			
 				</div>

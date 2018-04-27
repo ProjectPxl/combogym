@@ -10,14 +10,15 @@ class Combo.Views.ComboPage extends Backbone.View
 	initialize: ->
 		@listenTo @model, 'change',  @updateCombo
 
-		# @model.set
-		# 	"Rack 1" : "300"
+		@model.set gon.base
 
 	updateCombo: (model) ->
 		@setImageName(model)
 		@updateSummary(model)
 
 	toggleCategoryItem: (event) ->
+		return if $(event.target).hasClass('is-base')
+
 		$item 			= $(event.target)
 		name  			= $item.data('item-name')
 		id  				= $item.data('item-id')

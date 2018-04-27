@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20180427203703_add_base_to_product_combinations.rb

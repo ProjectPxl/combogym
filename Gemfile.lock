@@ -72,6 +72,10 @@ GEM
     ffi (1.9.23)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    gon (6.2.0)
+      actionpack (>= 3.0)
+      multi_json
+      request_store (>= 1.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
@@ -138,6 +142,8 @@ GEM
       execjs
       railties (>= 3.2)
       tilt
+    request_store (1.4.1)
+      rack (>= 1.4)
     ruby_dep (1.5.0)
     sass (3.5.6)
       sass-listen (~> 4.0.0)
@@ -189,6 +195,7 @@ DEPENDENCIES
   backbone-on-rails
   byebug
   coffee-rails (~> 4.2)
+  gon
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
